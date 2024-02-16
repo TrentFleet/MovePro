@@ -6,7 +6,7 @@ import { Label } from "@/components/ui/label"
 import { HomeIcon } from "lucide-react";
 import React from "react";
 
-export function InputWithLabel() {
+function InputWithLabel() {
   const inputs = [
     { id: 'email', type: 'email', placeholder: 'Email' },
     { id: 'password', type: 'password', placeholder: 'Password' },
@@ -26,7 +26,6 @@ export function InputWithLabel() {
 }
 
 const SignIn = () => {
-  const newLocal = <InputWithLabel />;
   return ( 
   <div>
     <Navbar />
@@ -37,7 +36,7 @@ const SignIn = () => {
         </Button>
       </Link>
     <div className="grid justify-center">
-      {newLocal}
+      <InputWithLabel />
     </div>
   </div> );
 }
