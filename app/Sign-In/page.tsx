@@ -26,6 +26,7 @@ export function InputWithLabel() {
 }
 
 const SignIn = () => {
+  const newLocal = <InputWithLabel />;
   return ( 
   <div>
     <Navbar />
@@ -36,7 +37,7 @@ const SignIn = () => {
         </Button>
       </Link>
     <div className="grid justify-center">
-      <InputWithLabel />
+      {newLocal}
     </div>
   </div> );
 }
