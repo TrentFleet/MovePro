@@ -79,11 +79,7 @@ export default function CarouselDemo() {
       ></h3>
       <p className="text-2xl pt-4 text-center w-2/3 mx-auto text-purple-600">
         Move with Us.
-        <div className="m-4">
-
-        </div>
       </p>
-      
     </div>
   );
 }
