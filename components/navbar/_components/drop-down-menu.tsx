@@ -155,7 +155,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         <div className="flex lg:space-x-4 items-center pr-4">
           <div>
             <Link href="/Sign-In">
-              <Button className="p-4 mt-4">
+              <Button variant={"outline"} className="p-4 mt-4">
                 Log in 
               </Button>
             </Link>

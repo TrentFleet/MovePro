@@ -9,8 +9,7 @@ const Footer = () => {
       {/* CTA Section */}
       <div className="container mx-auto py-4 flex flex-col items-center">
         <div className="text-4xl xl:text-5xl font-medium text-center">
-          We aim to inspire and empower you <br></br>To embrace an active
-          lifestyle.
+          We aim to Inspire and Empower.
         </div>
         <div
           className="text-purple-500 flex p-4 m-4 items-center hover:underline text-lg hover:cursor-pointer"
@@ -30,7 +29,6 @@ const Footer = () => {
         {/* Social Media Links */}
         <div className="flex gap-4 justify-center text-center">
           {/* Example: Replace with your social media links */}
-          <p className="font-bold">Find us on all Platforms:</p>
 
           <a
             href="https://instagram.com"

@@ -19,15 +19,29 @@ function InputWithLabel() {
 
 const SignUp = () => {
   return ( 
-  <div className="flex flex-col justify-center text-center">
+  <div>
+    <Navbar />
     <Link href="/">
       <Button className="bg-purple-600 m-2 p-4">
         <HomeIcon className="text-2xl mr-2" />
         Home
       </Button>
     </Link>
-    <Navbar />
     <div className="grid justify-center">
+    <div
+        className="
+      font-medium 
+      px-8
+      text-5xl
+      xl:text-6xl
+      flex
+      justify-center
+      xl:pt-4
+      text-center
+      "
+      >
+        Sign up
+    </div>
       <InputWithLabel />
     </div>
   </div> );

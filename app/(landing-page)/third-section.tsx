@@ -77,8 +77,8 @@ const ThirdSection = () => {
         
                 ${
                   activeTab.name === tab.name
-                  ? "rounded-md md:rounded-xl bg-[#f6f5f4]  md:bg-white border-gray-200 md:border items-center justify-center flex p-1 "
-                  : "md:bg-[#f6f5f4]   rounded-md xl:rounded-xl p-1 items-center justify-center hover:bg-[#eae7e7] "
+                  ? "rounded-md md:rounded-xl bg-purple-400 md:bg-white border-gray-200 md:border items-center justify-center flex p-4"
+                  : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-4 items-center justify-center hover:bg-slate-200"
                 } `
             }
                 

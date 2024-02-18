@@ -13,7 +13,7 @@ function InputWithLabel() {
   ];
 
   return (
-    <div className="grid w-full max-w-sm items-center border-2 rounded-lg p-10 border-black  shadow-md transition-transform transform  hover:scale-105 mt-40 gap-1.5">
+    <div className="grid w-full max-w-sm items-center border-2 rounded-lg p-10 border-black  shadow-md transition-transform transform  hover:scale-105 mt-20 gap-1.5">
       {inputs.map((input) => (
         <React.Fragment key={input.id}>
           <Label htmlFor={input.id}>{input.placeholder}</Label>
@@ -36,6 +36,20 @@ const SignIn = () => {
         </Button>
       </Link>
     <div className="grid justify-center">
+    <div
+        className="
+      font-medium 
+      px-8
+      text-5xl
+      xl:text-6xl
+      flex
+      justify-center
+      xl:pt-4
+      text-center
+      "
+      >
+        Sign In
+    </div>
       <InputWithLabel />
     </div>
   </div> );
