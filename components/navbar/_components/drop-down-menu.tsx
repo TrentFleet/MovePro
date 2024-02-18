@@ -26,7 +26,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     w-screen
     h-auto 
     absolute
-    bg-white
+    bg-slate-100
     px-12
     flex
     flex-col
