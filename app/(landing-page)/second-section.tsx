@@ -27,7 +27,7 @@ export default function CarouselDemo() {
     xl:pt-14
     text-center
     bg-gradient-to-r
-    from-purple-300
+    from-purple-600
     mt-8
     "
       >
