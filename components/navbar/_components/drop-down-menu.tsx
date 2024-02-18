@@ -20,13 +20,13 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
   }
 
   return (
+    <div className="mt-16">
     <div
-      className="
-    mt-96
-    w-3/4
+    className="
+    w-full
     h-auto
     absolute
-    bg-slate-100
+    bg-slate-50
     px-12
     flex
     flex-col
@@ -34,17 +34,19 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     right-0
     xl:hidden
     z-10
-    border-black
-    border
+    border-slate-600
+    border-2
+    p-6
     "
     >
       <div>
+        </div>
       <Accordion
         defaultValue={""}
         className="pl-2"
         type="single"
         collapsible
-      >
+        >
         
         <AccordionItem className="border-b" value="item-1">
           <AccordionTrigger className="flex mt-16">Sign up</AccordionTrigger>

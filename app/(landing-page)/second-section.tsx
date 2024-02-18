@@ -33,7 +33,7 @@ export default function CarouselDemo() {
       >
         <div></div>
 
-        <Carousel className="flex text-center lg:max-w-80 w-60 justify-center m-10 ">
+        <Carousel className="flex text-center lg:max-w-100 w-60 justify-center m-10 ">
           <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index}>
@@ -43,7 +43,7 @@ export default function CarouselDemo() {
                       <img
                         src={`assets/image${(index % 5) + 1}.jpg`}
                         alt={`Random Image ${index + 1}`}
-                        className="lg:max-w-80 lg:w-80 w-80 h-80 justify-center text-center"
+                        className="lg:max-w-100 lg:w-100 w-100 h-100 justify-center text-center"
                         // Adjusted the class to "w-full lg:w-80" for responsiveness
                       />
                     </CardContent>
