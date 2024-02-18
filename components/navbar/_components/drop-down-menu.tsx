@@ -23,8 +23,8 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     <div
       className="
     mt-96
-    w-screen
-    h-auto 
+    w-3/4
+    h-auto
     absolute
     bg-slate-100
     px-12
@@ -34,6 +34,8 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     right-0
     xl:hidden
     z-10
+    border-black
+    border
     "
     >
       <div>
