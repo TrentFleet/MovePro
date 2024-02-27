@@ -22,7 +22,7 @@ const ActionButtons = () => {
     <div className="pr-2">
       <div className="items-center justify-center flex">
         <div className="flex xl:space-x-4">
-          <Link href={"/Our-Product"} className="hidden lg:flex items-center">
+          <Link href={"/Workout"} className="hidden lg:flex items-center">
             <Button
               variant={"outline"}
               className="hidden lg:flex items-center border-none text-md"

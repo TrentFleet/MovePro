@@ -27,16 +27,16 @@ const HeroSection = () => {
       text-center
       pt-6"
       >
-        Generate, Workouts, Meal plans, Find Purpose.
+        Generate your own Workouts!
       </div>
 
       <p className="text-2xl pt-4 mt-2 text-center w-2/3 mx-auto text-purple-600">
-        Crush Your Goals, Get Fit, and Stay Healthy with MovePro.
+      Streamline your programming effortlessly with MovePro
       </p>
       <div className="flex gap-4 pt-6 items-center justify-center">
         <Link href={"/Sign-Up"}>
-          <Button className="py-1">
-            <div className="flex items-center justify-center">
+          <Button className="py-1 bg-black hover:bg-purple-600">
+            <div className="flex items-center  justify-center">
               <div className="text-lg">Join MovePro</div>
               <div>
                 <PiArrowRight />

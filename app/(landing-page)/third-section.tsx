@@ -3,52 +3,25 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef } from "react";
-import { useInView } from "framer-motion";
 import { useState } from "react";
-import {
-  PiArrowRight,
-  PiBookOpenTextLight,
-  PiClockAfternoonLight,
-  PiCompassLight,
-  PiFileThin,
-  PiHeadset,
-  PiMegaphoneLight,
-  PiRocketLaunchFill,
-  PiSparkleLight,
-  PiTargetLight,
-} from "react-icons/pi";
-import { Apple, Award, Dumbbell, Flame, Users } from "lucide-react";
+
+import { Calendar, Dumbbell, Flame } from "lucide-react";
 
 const tabs = [
   {
     icon: <Dumbbell />,
-    name: "Workouts",
+    name: "Step 1: Generate a Warm up",
     image: "/assets/1.png",
   },
   {
-    icon: <Apple />,
-    name: "Diets",
+    icon: <Flame />,
+    name: "Step 2: Create the Workout",
     image: "/assets/2.png",
   },
   {
-    icon: <PiRocketLaunchFill />,
-    name: "Goal Setting",
+    icon: <Calendar />,
+    name: "Step 3: Complete the Workout",
     image: "/assets/3.png",
-  },
-  {
-    icon: <Flame />,
-    name: "Streaks",
-    image: "/assets/4.png",
-  },
-  {
-    icon: <Award />,
-    name: "Challenges",
-    image: "/assets/5.png",
-  },
-  {
-    icon: <Users />,
-    name: "Community",
-    image: "/assets/6.png",
   },
 ];
 
@@ -58,33 +31,30 @@ const ThirdSection = () => {
   const [activeTab, setActiveTab] = useState(tabs[0]);
 
   return (
-    <div className=" relative flex justify-center items-center flex-col px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
-      <div className="pt-8 lg:pt-0 text-3xl xl:text-5xl font-medium text-center">
-      Our Features
+    <div className=" relative flex justify-center items-center flex-col m-8 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
+      <div className="pt-8 m-8 lg:pt-0 text-3xl xl:text-5xl font-medium text-center">
+        How MovePro works
       </div>
 
-      <div className="grid grid-cols-4  md:grid-cols-6 md:row-span-1  gap-4  xl:gap-6 mt-4   xl:px-0  ">
+      <div className="flex flex-row justify-between gap-10 p-2">
         {tabs.map((tab) => (
           <motion.div
             key={tab.name}
             className={`
               flex 
-            p-1
-              md:p-8
+              md:p-4
              
       
                 cursor-pointer
         
                 ${
                   activeTab.name === tab.name
-                  ? "rounded-md md:rounded-xl bg-purple-400 md:bg-white border-gray-200 md:border items-center justify-center flex p-4"
-                  : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-4 items-center justify-center hover:bg-slate-200"
-                } `
-            }
-                
+                    ? "rounded-md md:rounded-xl bg-white md:bg-white border-gray-200 md:border items-center justify-center flex-col flex p-4"
+                    : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-4 items-center justify-center hover:bg-slate-300"
+                } `}
             onClick={() => setActiveTab(tab)}
           >
-            <div className="flex flex-col   items-center md:justify-center mx-auto">
+            <div className="flex flex-col items-center md:justify-center">
               <div className="hidden md:flex text-4xl">{tab.icon}</div>
               <div className="font-medium text-sm  xl:text-lg mt-1">
                 {tab.name}
@@ -95,22 +65,21 @@ const ThirdSection = () => {
       </div>
 
       {/* Display content based on the active tab */}
-      <div className="py-10   lg:px-16 xl:px-0 md:px-16  w-65 ">
+      <div className="py-4   lg:px-8 xl:px-0 md:px-8  w-3/4">
         {activeTab && (
           <div className=" flex justify-center items-center flex-col  ">
             <Image
               src={activeTab.image}
-              width={1025}
-              height={500}
+              width={300}
+              height={300}
               alt="logo"
               className="
                 w-full
              border
-             p-20
-             xl:p-40
+             p-10
+             xl:p-20
              rounded-xl
           
-             
                 "
             />
           </div>

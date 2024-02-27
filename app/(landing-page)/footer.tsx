@@ -2,6 +2,8 @@
 
 import { PiArrowRight, PiArrowUp } from "react-icons/pi";
 import Image from "next/image";
+import Link from "next/link";
+import { Button } from "@/components/ui/button";
 
 const Footer = () => {
   return (
@@ -9,8 +11,15 @@ const Footer = () => {
       {/* CTA Section */}
       <div className="container mx-auto py-4 flex flex-col items-center">
         <div className="text-4xl xl:text-5xl font-medium text-center">
-          We aim to Inspire and Empower.
-        </div>
+          Generate Your First Workout!
+          <div className="mt-6">
+            <Link href="/Workout">
+              <Button className="text-lg">
+                Get Started
+              </Button>
+            </Link>
+            </div>
+          </div>
         <div
           className="text-purple-500 flex p-4 m-4 items-center hover:underline text-lg hover:cursor-pointer"
           onClick={() => window.scrollTo(0, 0)}
