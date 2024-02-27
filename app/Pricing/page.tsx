@@ -1,19 +1,16 @@
 import Navbar from "@/components/navbar/navbar";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Flame, FlameIcon, HomeIcon } from "lucide-react";
+import { HomeIcon } from "lucide-react";
 
 const Pricing = () => {
   const pricingTiers = [
     {
-      title: "One payment",
-      price: "$10 for all features",
+      title: "One off Donation",
+      price: "$5",
       features: [
-        "Generated Workouts",
-        "Diet Templates",
-        "Admin Dashboard",
-        "Community Page",
-        "Habbit Tracker",
+        "MovePro's Generated Workouts",
+        "Thank you for your support"
       ],
     },
   ];

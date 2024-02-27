@@ -27,7 +27,7 @@ const ActionButtons = () => {
               variant={"outline"}
               className="hidden lg:flex items-center border-none text-md"
             >
-              View our Product
+              Generate Workouts
             </Button>
           </Link>
         </div>

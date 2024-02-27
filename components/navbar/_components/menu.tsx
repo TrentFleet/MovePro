@@ -63,36 +63,36 @@ const menuItems = [
 const WorkoutComponent: { title: string; href: string; description: string }[] =
   [
     {
-      title: "Generate Workout Plan",
-      href: "/Our-Product",
+      title: "Generate Workout Plan | Created on 27/02/24",
+      href: "/Workout",
       description: "Create your personalized workout plan.",
  
       
     },
     {
-      title: "Workout Timer",
-      href: "/Demo-Our-Product",
+      title: "Workout Timer  | coming soon",
+      href: "/Workout",
       description: "Time your workout and stay focused on the clock!.",
     },
     {
-      title: "Create Diet Plan",
-      href: "/Demo-Our-Product",
+      title: "Create Diet Plan | coming soon",
+      href: "/Workout",
       description:
         "Craft a tailored diet plan that aligns with your nutritional goals.",
     },
     {
-      title: "Leaderboard",
-      href: "/Demo-Our-Product",
+      title: "Leaderboard  | coming soon",
+      href: "/Workout",
       description: "View our Top Users.",
     },
     {
-      title: "Daily Log",
-      href: "/Demo-Our-Product",
+      title: "Daily Log  | coming soon",
+      href: "/Workout",
       description: "Log your daily workout and meals for progress tracking.",
     },
     {
-      title: "Tips and guides",
-      href: "/Demo-Our-Product",
+      title: "Tips and guides  | coming soon",
+      href: "/Workout",
       description: "Explore helpful tips and guides for your fitness journey.",
     },
   ];
@@ -118,7 +118,10 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <Flame className="text-2xl mr-2 text-red-600" />
                   <div>
-                    <Link href="/Sign-Up">Gain Streaks</Link>
+                    <Link className="line-through" href="/Sign-Up">Gain Streaks</Link>
+                    <p className="text-purple-400 text-sm font-light">
+                      Coming soon
+                    </p>
                     <p className="text-gray-400 text-sm font-light">
                       Daily challenges and streak tracking
                     </p>
@@ -127,18 +130,24 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <PiSparkleLight className="text-4xl mr-2 text-yellow-600" />
                   <div>
-                    <Link href="/Sign-Up">Achievements</Link>
+                    <Link className="line-through" href="/Sign-Up">Achievements</Link>
                     <p className="text-gray-400 text-sm font-light">
                       Badges and achievements for completing challenges
+                    </p>
+                    <p className="text-purple-400 text-sm font-light">
+                      Coming soon
                     </p>
                   </div>
                 </div>
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <BarChart3 className="text-2xl mr-2 text-blue-600" />
                   <div>
-                    <Link href="/Sign-Up">History</Link>
+                    <Link className="line-through" href="/Sign-Up">History</Link>
                     <p className="text-gray-400 text-sm font-light">
                       Workout and diet plan history
+                    </p>
+                    <p className="text-purple-400 text-sm font-light">
+                      Coming soon
                     </p>
                   </div>
                 </div>
@@ -163,7 +172,7 @@ export function Menu() {
                   {WorkoutComponent.description}
                 </ListItem>
               ))}
-            </ul>
+            {/* </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem></NavigationMenuItem>
@@ -181,6 +190,8 @@ export function Menu() {
                   {component.description}
                 </ListItem>
               ))}
+            </ul> */}
+
             </ul>
           </NavigationMenuContent>
         </NavigationMenuItem>

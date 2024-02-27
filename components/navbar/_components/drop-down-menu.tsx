@@ -26,7 +26,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     w-full
     h-auto
     absolute
-    bg-slate-50
+    bg-purple-100
     px-12
     flex
     flex-col
@@ -34,7 +34,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
     right-0
     xl:hidden
     z-10
-    border-slate-600
+    border-black
     border-2
     p-6
     "
@@ -64,6 +64,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Award className="h-6 w-6 mr-2 text-green-600" />
               <div>Streaks</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Sign-Up"
@@ -71,6 +72,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Medal className="h-6 w-6 mr-2 text-yellow-600" />
               <div>Achievements</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Sign-Up"
@@ -78,6 +80,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Trophy className="h-6 w-6 mr-2 text-purple-600" />
               <div>History</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -85,7 +88,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           <AccordionTrigger>Workout & Diet</AccordionTrigger>
           <AccordionContent className="space-y-2">
             <Link
-              href="/Our-Product"
+              href="/Workout"
               className="flex"
               onClick={handleLinkClick}>
               <Dumbbell className="h-6 w-6 mr-2 text-red-600" />
@@ -97,6 +100,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Apple className="h-6 w-6 mr-2 text-green-600" />
               <div>Create Diet Plan</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Our-Product"
@@ -104,6 +108,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <CalendarDays className="h-6 w-6 mr-2 text-blue-600" />
               <div>Daily Log</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Our-Product"
@@ -111,6 +116,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <CheckSquare className="h-6 w-6 mr-2 text-orange-600" />
               <div>Tips and Guides</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -123,6 +129,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Sunrise className="h-6 w-6 mr-2 text-orange-400" />
               <div>Workout of the Day</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Community"
@@ -130,6 +137,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Building className="h-6 w-6 mr-2 text-blue-600" />
               <div>Community Feed</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Community"
@@ -137,6 +145,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Swords className="h-6 w-6 mr-2 text-red-600" />
               <div>Join Challenges</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
             <Link
               href="/Community"
@@ -144,6 +153,7 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
               onClick={handleLinkClick}>
               <Presentation className="h-6 w-6 mr-2 text-purple-600" />
               <div>Leaderboards</div>
+              <div className="text-purple-600 ml-2">Coming soon</div>
             </Link>
           </AccordionContent>
         </AccordionItem>
@@ -151,9 +161,9 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
         className="flex flex-1 items-center justify-between py-4 border-b">
           Pricing
         </Link>
-        <Link href={"/Our-Product"}
+        <Link href={"/Workout"}
         className="flex flex-1 items-center justify-between py-4 border-b">
-          View Our Product
+          Create a Workout
         </Link>
         <div className="font-thin lg:flex items-center hidden">|</div>
         <div className="flex lg:space-x-4 items-center pr-4">

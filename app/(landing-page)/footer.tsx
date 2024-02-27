@@ -9,19 +9,27 @@ const Footer = () => {
   return (
     <footer className="py-8">
       {/* CTA Section */}
-      <div className="container mx-auto py-4 flex flex-col items-center">
+      <div
+        className="container m-6 bg-gradient-to-l
+    from-purple-400 mx-auto py-4 flex flex-col items-center"
+      >
         <div className="text-4xl xl:text-5xl font-medium text-center">
           Generate Your First Workout!
           <div className="mt-6">
+            <Image
+              className="container w-3/4 mx-auto py-4 flex flex-col items-center"
+              src="/assets/image5.jpg"
+              alt="Workout"
+              width={500}
+              height={500}
+            />
             <Link href="/Workout">
-              <Button className="text-lg">
-                Get Started
-              </Button>
+              <Button className="text-lg bg-black mt-6">Get Started</Button>
             </Link>
-            </div>
           </div>
+        </div>
         <div
-          className="text-purple-500 flex p-4 m-4 items-center hover:underline text-lg hover:cursor-pointer"
+          className="flex p-4 m-4 items-center hover:underline text-lg hover:cursor-pointer"
           onClick={() => window.scrollTo(0, 0)}
         >
           Back to Top
@@ -43,7 +51,7 @@ const Footer = () => {
             href="https://instagram.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-lg text-black-500 hover:text-pink-400"
+            className="font-bold text-md text-black-500 hover:text-purple-600"
           >
             Instagram
           </a>
@@ -51,7 +59,7 @@ const Footer = () => {
             href="https://discord.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-lg text-black-500 hover:text-gray-600"
+            className="font-bold text-md text-black-500 hover:text-purple-600"
           >
             Discord
           </a>
@@ -59,7 +67,7 @@ const Footer = () => {
             href="https://youtube.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-bold text-lg text-black-500 hover:text-red-700"
+            className="font-bold text-md text-black-500 hover:text-purple-600"
           >
             YouTube
           </a>
