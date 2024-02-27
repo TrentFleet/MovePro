@@ -49,7 +49,7 @@ const ThirdSection = () => {
         
                 ${
                   activeTab.name === tab.name
-                    ? "rounded-md md:rounded-xl bg-white md:bg-white border-gray-200 md:border items-center justify-center flex-col flex p-4"
+                    ? "rounded-md md:rounded-xl bg-purple-300 md:bg-purple-300 border-gray-200 md:border items-center justify-center flex-col flex p-4"
                     : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-4 items-center justify-center hover:bg-slate-300"
                 } `}
             onClick={() => setActiveTab(tab)}
@@ -65,7 +65,7 @@ const ThirdSection = () => {
       </div>
 
       {/* Display content based on the active tab */}
-      <div className="py-4   lg:px-8 xl:px-0 md:px-8  w-3/4">
+      <div className="py-4 lg:w-1/2   lg:px-8 xl:px-0 md:px-8  w-3/4">
         {activeTab && (
           <div className=" flex justify-center items-center flex-col  ">
             <Image

@@ -19,11 +19,11 @@ const Workout = () => {
           Home
         </Button>
       </Link>
-      <div className="lg:flex lg:flex-row sm:flex-col gap-10 justify-center items-center">
+      <div className="lg:flex lg:flex-col lg:mx-20 sm:flex-col gap-10 justify-center items-center ">
         <WorkoutInfo />
-        <PiArrowDownBold className="m-4 mx-auto text-4xl" />
+        <PiArrowDownBold className="m-2 mx-auto text-4xl" />
         <WorkoutGenerator />
-        <PiArrowDownBold className="m-4 mx-auto text-4xl" />
+        <PiArrowDownBold className="m-2 mx-auto text-4xl" />
         <WorkoutLog />
       </div>
       <div

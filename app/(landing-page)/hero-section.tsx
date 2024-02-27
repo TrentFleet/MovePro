@@ -27,7 +27,8 @@ const HeroSection = () => {
       text-center
       pt-6"
       >
-        Generate your own Workouts!
+      
+        Generate Your Own Workouts
       </div>
 
       <p className="text-2xl pt-4 mt-2 text-center w-2/3 mx-auto text-purple-600">
