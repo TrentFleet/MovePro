@@ -9,6 +9,7 @@ import Link from "next/link";
 import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
 
+
 const ActionButtons = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
 
@@ -19,6 +20,8 @@ const ActionButtons = () => {
   const closeDropdown = () => {
     setDropdownVisible(false);
   };
+
+
 
   return (
     <div className="pr-2">
