@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { HomeIcon } from "lucide-react";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
+<RegisterLink postLoginRedirectURL="/Workout">Sign up</RegisterLink>
+
 
 function InputWithLabel() {
   return (
@@ -28,19 +32,7 @@ const SignUp = () => {
       </Button>
     </Link>
     <div className="grid justify-center">
-    <div
-        className="
-      font-medium 
-      px-8
-      text-5xl
-      xl:text-6xl
-      flex
-      justify-center
-      xl:pt-4
-      text-center
-      "
-      >
-        Sign up
+    <div>
     </div>
       <InputWithLabel />
     </div>

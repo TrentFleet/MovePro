@@ -17,7 +17,7 @@ const Footer = () => {
           Generate Your First Workout!
           <div className="mt-6">
             <Image
-              className="container w-3/4 mx-auto py-4 flex flex-col items-center"
+              className="w-2/4 mx-auto py-4 flex flex-col items-center"
               src="/assets/image5.jpg"
               alt="Workout"
               width={500}

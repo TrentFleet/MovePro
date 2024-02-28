@@ -6,6 +6,8 @@ import { Button } from "@/components/ui/button";
 import DropDownMenu from "./drop-down-menu";
 import { X, AlignJustify } from "lucide-react";
 import Link from "next/link";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 
 const ActionButtons = () => {
   const [isDropdownVisible, setDropdownVisible] = useState(false);
@@ -35,22 +37,22 @@ const ActionButtons = () => {
         <div className="font-thin lg:flex items-center hidden">|</div>
         <div className="flex lg:space-x-4 items-center pr-4">
           <div>
-            <Link href={"/Sign-In"} className="hidden lg:flex items-center">
+            <LoginLink className="hidden lg:flex items-center">
               <Button
                 variant={"outline"}
                 className="hidden lg:flex items-center border-none text-md"
               >
                 Log in
               </Button>
-            </Link>
+              </LoginLink>
           </div>
           <div>
-            <Link href={"/Sign-Up"} className="hidden lg:flex items-center">
+            <RegisterLink className="hidden lg:flex items-center">
               <Button 
               className="hidden lg:flex items-center border-none text-md text-white bg-purple-600">
                 Sign up
               </Button>
-            </Link>
+            </RegisterLink>
           </div>
         </div>
 
