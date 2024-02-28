@@ -6,6 +6,8 @@ import Link from "next/link";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 import { PiArrowRight, PiSparkleLight } from "react-icons/pi";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 
 const HeroSection = () => {
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
@@ -35,7 +37,7 @@ const HeroSection = () => {
       Streamline your programming effortlessly with MovePro
       </p>
       <div className="flex gap-4 pt-6 items-center justify-center">
-        <Link href={"/Sign-Up"}>
+        <RegisterLink>
           <Button className="py-1 bg-black hover:bg-purple-600">
             <div className="flex items-center  justify-center">
               <div className="text-lg">Join MovePro</div>
@@ -44,7 +46,7 @@ const HeroSection = () => {
               </div>
             </div>
           </Button>
-        </Link>
+        </RegisterLink>
       </div>
 
       

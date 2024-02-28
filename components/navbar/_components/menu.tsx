@@ -13,6 +13,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
 
 import { PiBookOpenTextLight, PiSparkleLight } from "react-icons/pi";
 import { BarChart3, Flame, Laugh } from "lucide-react";
@@ -64,35 +65,35 @@ const WorkoutComponent: { title: string; href: string; description: string }[] =
   [
     {
       title: "Generate Workout Plan | Created on 27/02/24",
-      href: "/Workout",
+      href: "/Pricing",
       description: "Create your personalized workout plan.",
  
       
     },
     {
       title: "Workout Timer  | coming soon",
-      href: "/Workout",
+      href: "/Pricing",
       description: "Time your workout and stay focused on the clock!.",
     },
     {
       title: "Create Diet Plan | coming soon",
-      href: "/Workout",
+      href: "/Pricing",
       description:
         "Craft a tailored diet plan that aligns with your nutritional goals.",
     },
     {
       title: "Leaderboard  | coming soon",
-      href: "/Workout",
+      href: "/Pricing",
       description: "View our Top Users.",
     },
     {
       title: "Daily Log  | coming soon",
-      href: "/Workout",
+      href: "/Pricing",
       description: "Log your daily workout and meals for progress tracking.",
     },
     {
       title: "Tips and guides  | coming soon",
-      href: "/Workout",
+      href: "/Pricing",
       description: "Explore helpful tips and guides for your fitness journey.",
     },
   ];
@@ -109,7 +110,7 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <Laugh className="text-2xl mr-2 text-purple-600" />
                   <div>
-                    <Link href="/Sign-Up">Personal Details</Link>
+                    <RegisterLink>Personal Details</RegisterLink>
                     <p className="text-gray-400 text-sm font-light">
                       Personalise and edit your profile
                     </p>
@@ -118,7 +119,7 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <Flame className="text-2xl mr-2 text-red-600" />
                   <div>
-                    <Link className="line-through" href="/Sign-Up">Gain Streaks</Link>
+                    <RegisterLink className="line-through">Gain Streaks</RegisterLink>
                     <p className="text-purple-400 text-sm font-light">
                       Coming soon
                     </p>
@@ -130,7 +131,7 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <PiSparkleLight className="text-4xl mr-2 text-yellow-600" />
                   <div>
-                    <Link className="line-through" href="/Sign-Up">Achievements</Link>
+                    <RegisterLink className="line-through">Achievements</RegisterLink>
                     <p className="text-gray-400 text-sm font-light">
                       Badges and achievements for completing challenges
                     </p>
@@ -142,7 +143,7 @@ export function Menu() {
                 <div className="flex items-center gap-1 hover:bg-gray-400/10 p-1 rounded-sm">
                   <BarChart3 className="text-2xl mr-2 text-blue-600" />
                   <div>
-                    <Link className="line-through" href="/Sign-Up">History</Link>
+                    <RegisterLink className="line-through">History</RegisterLink>
                     <p className="text-gray-400 text-sm font-light">
                       Workout and diet plan history
                     </p>
