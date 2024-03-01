@@ -7,7 +7,11 @@ import { PiArrowDownBold } from "react-icons/pi";
 import WorkoutGenerator from "../Workout/workoutcontainer/page";
 import WorkoutInfo from "../Workout/workoutinfo/page";
 import WorkoutLog from "../Workout/workoutlog/page";
-import InstructionSection from "@/components/InstructionSection"; // Import the InstructionSection component
+import dynamic from 'next/dynamic';
+
+const InstructionSection = dynamic(() => import('@/components/InstructionSection'), { ssr: false });
+
+// ... rest of the file
 
 export default function Dashboard() {
   const [isInstructionVisible, setIsInstructionVisible] = useState(true);

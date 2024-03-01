@@ -26,10 +26,10 @@ const Reviews = () => {
 
   return (
     <div>
-      <div className="flex flex-col  bg-gradient-to-l
+      <div className="flex flex-col mx-10 bg-gradient-to-l
     from-purple-400 justify-center text-center p-4">
         <h1 className="text-4xl font-medium mb-8 text-center">
-          Our User Reviews
+          Our Users
         </h1>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {userReviews.map((review, index) => (
