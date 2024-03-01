@@ -36,9 +36,6 @@ export default function Dashboard() {
           <PiArrowDownBold className="m-2 mx-auto text-4xl" />
           <WorkoutLog />
         </div>
-        <Button onClick={toggleInstructionVisibility}>
-          {isInstructionVisible ? 'Hide Instructions' : 'Show Instructions'}
-        </Button>
       </div>
     </main>
   );

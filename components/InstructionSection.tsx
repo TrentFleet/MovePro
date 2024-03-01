@@ -13,20 +13,16 @@ const InstructionSection = () => {
       {isContentVisible && (
         <div className="flex-col w-64 mx-auto px-auto flex justify-center items-center font-semibold text-md m-4">
           <h1 className="m-2">
-            1. To start using MovePro, begin by selecting your time domain. This
-            will determine the duration of your workout.
+          1. Use the two-section generator and to view your workout.
           </h1>
           <h1 className="text-purple-600 m-2">
-            2. Next, choose your warm-up and stretches. Your time domain will be
-            based on the combined duration of these.
+            2. Warm-up Choice: Pick your warm-up and stretches.
           </h1>
           <h1 className="m-2">
-            3. Scroll down to create your workout. Choose the type of training,
-            the muscle group to focus on, and the intensity for the day.
+            3. Scroll down again, choose training type, muscle group, and intensity.
           </h1>
           <h1 className="text-purple-600 m-2">
-            4. Lastly, scroll down and log your workout! Get out there and crush
-            it!
+            4. Scroll down once more, log your workout, and go crush it!
           </h1>
         </div>
       )}
