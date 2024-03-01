@@ -2,8 +2,9 @@
 
 import { PiArrowRight, PiArrowUp } from "react-icons/pi";
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import {RegisterLink, LoginLink} from "@kinde-oss/kinde-auth-nextjs/components";
+
 
 const Footer = () => {
   return (
@@ -23,9 +24,9 @@ const Footer = () => {
               width={500}
               height={500}
             />
-            <Link href="/Workout">
+            <RegisterLink>
               <Button className="text-lg bg-black mt-6">Get Started</Button>
-            </Link>
+            </RegisterLink>
           </div>
         </div>
         <div

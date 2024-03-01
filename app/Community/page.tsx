@@ -8,13 +8,15 @@ const Community = () => {
     <div>
       <Navbar />
       <Link href="/">
-        <Button className="bg-purple-600 m-2 p-4">
+        <Button className="bg-purple-600 m-6 p-4">
           <HomeIcon className="text-2xl mr-2" />
           Home
         </Button>
       </Link>
 
-      <div>community goes here</div>
+      <div className="flex justify-center items-center">
+        Our community page is being built{" "}
+      </div>
     </div>
   );
 };

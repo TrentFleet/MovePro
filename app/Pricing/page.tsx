@@ -6,11 +6,10 @@ import { HomeIcon } from "lucide-react";
 const Pricing = () => {
   const pricingTiers = [
     {
-      title: "One off Donation",
+      title: "One-Time Purchase",
       price: "$5",
       features: [
-        "MovePro's Generated Workouts",
-        "Thank you for your support"
+        "Unlimited Generated Workouts",
       ],
     },
   ];
@@ -43,7 +42,7 @@ const Pricing = () => {
                   </li>
                 ))}
               </ul>
-              <Button>Get Started</Button>
+              <Button className="bg-black">Get Started</Button>
             </div>
           ))}
         </div>

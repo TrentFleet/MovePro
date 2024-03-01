@@ -87,37 +87,25 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           <AccordionItem className="border-b" value={"item-2"}>
             <AccordionTrigger>Workout & Diet</AccordionTrigger>
             <AccordionContent className="space-y-2">
-              <Link href="/Workout" className="flex" onClick={handleLinkClick}>
+              <RegisterLink className="flex" onClick={handleLinkClick}>
                 <Dumbbell className="h-6 w-6 mr-2 text-red-600" />
                 <div>Generate Workout</div>
-              </Link>
-              <Link
-                href="/Our-Product"
-                className="flex"
-                onClick={handleLinkClick}
-              >
+              </RegisterLink>
+              <RegisterLink className="flex" onClick={handleLinkClick}>
                 <Apple className="h-6 w-6 mr-2 text-green-600" />
                 <div>Create Diet Plan</div>
                 <div className="text-purple-600 ml-2">Coming soon</div>
-              </Link>
-              <Link
-                href="/Our-Product"
-                className="flex"
-                onClick={handleLinkClick}
-              >
+              </RegisterLink>
+              <RegisterLink className="flex" onClick={handleLinkClick}>
                 <CalendarDays className="h-6 w-6 mr-2 text-blue-600" />
                 <div>Daily Log</div>
                 <div className="text-purple-600 ml-2">Coming soon</div>
-              </Link>
-              <Link
-                href="/Our-Product"
-                className="flex"
-                onClick={handleLinkClick}
-              >
+              </RegisterLink>
+              <RegisterLink className="flex" onClick={handleLinkClick}>
                 <CheckSquare className="h-6 w-6 mr-2 text-orange-600" />
                 <div>Tips and Guides</div>
                 <div className="text-purple-600 ml-2">Coming soon</div>
-              </Link>
+              </RegisterLink>
             </AccordionContent>
           </AccordionItem>
           <AccordionItem className="border-b" value={"item-3"}>
@@ -167,12 +155,9 @@ const DropDownMenu: React.FC<DropDownMenuProps> = ({ onClose }) => {
           >
             Pricing
           </Link>
-          <Link
-            href={"/Workout"}
-            className="flex flex-1 items-center justify-between py-4 border-b"
-          >
+          <RegisterLink className="flex flex-1 items-center justify-between py-4 border-b">
             Create a Workout
-          </Link>
+          </RegisterLink>
           <div className="font-thin lg:flex items-center hidden">|</div>
           <div className="flex lg:space-x-4 items-center pr-4">
             <div>
