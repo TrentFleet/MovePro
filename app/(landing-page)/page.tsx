@@ -3,6 +3,7 @@ import HeroSection from "./hero-section";
 import SecondSection from "./second-section";
 import ThirdSection from "./third-section";
 import Footer from "./footer";
+import Reviews from "./reviews";
 
 const LandingPage = () => {
   return ( <div>
@@ -10,6 +11,7 @@ const LandingPage = () => {
    <HeroSection />
    <SecondSection />
    <ThirdSection />
+   <Reviews />
    <Footer />
   </div> );
 }

@@ -11,8 +11,7 @@ const Footer = () => {
     <footer className="py-8">
       {/* CTA Section */}
       <div
-        className="container m-6 bg-gradient-to-l
-    from-purple-400 mx-auto py-4 flex flex-col items-center"
+        className="container m-6mx-auto py-4 flex flex-col items-center"
       >
         <div className="text-4xl xl:text-5xl font-medium text-center">
           Generate Your First Workout!
@@ -30,7 +29,7 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="flex p-4 m-4 items-center hover:underline text-lg hover:cursor-pointer"
+          className="flex p-4 mt-10 items-center hover:underline text-lg hover:cursor-pointer"
           onClick={() => window.scrollTo(0, 0)}
         >
           Back to Top
@@ -44,35 +43,7 @@ const Footer = () => {
           <Image src="/logos/logo2.svg" alt="Logo" width={120} height={40} />
         </div>
 
-        {/* Social Media Links */}
-        <div className="flex gap-4 justify-center text-center">
-          {/* Example: Replace with your social media links */}
 
-          <a
-            href="https://instagram.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-md text-black-500 hover:text-purple-600"
-          >
-            Instagram
-          </a>
-          <a
-            href="https://discord.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-md text-black-500 hover:text-purple-600"
-          >
-            Discord
-          </a>
-          <a
-            href="https://youtube.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-bold text-md text-black-500 hover:text-purple-600"
-          >
-            YouTube
-          </a>
-        </div>
 
         {/* Contact Information */}
         <div className="flex flex-row lg:flex-row mt-10">

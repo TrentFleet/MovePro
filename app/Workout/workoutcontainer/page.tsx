@@ -197,7 +197,7 @@ const WorkoutGenerator = () => {
         <Button
           type="button"
           onClick={handleGenerateWorkout}
-          className={`p-2 rounded focus:outline-none ${
+          className={`p-2 rounded bg-black focus:outline-none ${
             isLoading ? "opacity-50 cursor-not-allowed" : ""
           }`}
           disabled={isLoading}

@@ -41,7 +41,7 @@ const ThirdSection = () => {
   return (
     <div className="relative flex justify-center items-center flex-col m-8 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
       <div className={`pt-8 m-8 lg:pt-0 text-3xl xl:text-5xl font-medium text-center ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        How MovePro works
+        Arrive at the gym with a plan
       </div>
 
       <div className="flex flex-col justify-between gap-10 p-2">
@@ -55,7 +55,7 @@ const ThirdSection = () => {
             
               ${
                 activeTab.name === tab.name
-                  ? "rounded-md bg-gray-100 md:bg-gray-100 border-purple-400 items-center justify-center flex-col flex"
+                  ? "rounded-md bg-purple-200 md:bg-gray-100 border-purple-400 items-center justify-center flex-col flex"
                   : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-2items-center justify-center hover:bg-purple-100"
               } `}
             onClick={() => setActiveTab(tab)}
@@ -74,9 +74,9 @@ const ThirdSection = () => {
         {activeTab && (
           <div className="flex justify-center items-center flex-col">
             <p className="text-lg">
-              MovePro is designed to simplify your workout routine. Whether you are a beginner or an experienced fitness enthusiast:
+              MovePro is designed to simplify your workout routine:
             </p>
-            <p className="text-lg text-purple-600 mt-4">
+            <p className="text-lg text-purple-600 font-semibold mt-4">
               {activeTab.name === "Step 1: Generate a Warm up" && (
                 "Generate a personalized warm-up tailored to your workout duration and preferences."
               )}

@@ -1,5 +1,3 @@
-"use client";
-
 import Navbar from "@/components/navbar/navbar";
 import WorkoutInfo from "./workoutinfo/page";
 import WorkoutGenerator from "./workoutcontainer/page";

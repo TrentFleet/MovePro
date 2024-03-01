@@ -1,12 +1,15 @@
 import type { Metadata } from "next";
-import { Outfit } from "next/font/google";
+import { Outfit, Poppins } from "next/font/google";
 import "./globals.css";
 
-const font = Outfit({ subsets: ["latin"] });
+const font = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
 
 export const metadata: Metadata = {
-  title: "Your connected Workflow",
-  description: "Simple and Powerful Workout Diary",
+  title: "Your Fitness Experience",
+  description: "Simple and Powerful Workout Generator",
 };
 
 export default function RootLayout({
