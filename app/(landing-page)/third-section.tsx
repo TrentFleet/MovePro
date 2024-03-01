@@ -29,11 +29,14 @@ const ThirdSection = () => {
       setIsVisible(offset > 200); // Adjust the offset value based on when you want the effect to trigger
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Check if window is defined (i.e., we're not on the server)
+    if (typeof window !== 'undefined') {
+      window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+      return () => {
+        window.removeEventListener("scroll", handleScroll);
+      };
+    }
   }, []);
 
   return (
