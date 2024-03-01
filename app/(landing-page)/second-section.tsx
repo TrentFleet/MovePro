@@ -42,8 +42,8 @@ export default function CarouselDemo() {
                   <Card key={index}>
                     <CardContent>
                       <Image
-                      width={600}
-                      height={600}
+                      width={1000}
+                      height={1000}
                         src={`/assets/image${(index % 5) + 1}.jpg`}
                         alt={`Random Image ${index + 1}`}
                         className="lg:max-w-100 lg:w-100 w-100 h-100 justify-center text-center"
