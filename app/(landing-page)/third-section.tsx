@@ -29,8 +29,7 @@ const ThirdSection = () => {
       setIsVisible(offset > 200); // Adjust the offset value based on when you want the effect to trigger
     };
 
-    // Check if window is defined (i.e., we're not on the server)
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       window.addEventListener("scroll", handleScroll);
 
       return () => {
@@ -71,11 +70,9 @@ const ThirdSection = () => {
         ))}
       </div>
 
-      {/* Display content based on the active tab */}
       <div className={`py-4 lg:w-1/2 lg:px-8 xl:px-0 md:px-8 w-3/4 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {activeTab && (
           <div className="flex justify-center items-center flex-col">
-            {/* Content discussing what MovePro does and why it was designed */}
             <p className="text-lg">
               MovePro is designed to simplify your workout routine. Whether you are a beginner or an experienced fitness enthusiast:
             </p>
