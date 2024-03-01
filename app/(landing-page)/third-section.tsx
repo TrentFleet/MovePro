@@ -77,7 +77,7 @@ const ThirdSection = () => {
           <div className="flex justify-center items-center flex-col">
             {/* Content discussing what MovePro does and why it was designed */}
             <p className="text-lg">
-              MovePro is designed to simplify your workout routine. Whether you're a beginner or an experienced fitness enthusiast:
+              MovePro is designed to simplify your workout routine. Whether you are a beginner or an experienced fitness enthusiast:
             </p>
             <p className="text-lg text-purple-600 mt-4">
               {activeTab.name === "Step 1: Generate a Warm up" && (

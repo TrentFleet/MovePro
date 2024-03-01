@@ -27,14 +27,14 @@ export default function Dashboard() {
               <br />
             </h1>
             <h1 className="m-2">
-              The first, 'Options,' crafts a personalized workout duration,
+              The first, Options, crafts a personalized workout duration,
               warm-up, and stretches.
               <br />
             </h1>
             <h1 className="m-2">
-              The second, 'Workout' creates a Workout based on your preferences.
-              Once done, log your achievements! Best of luck&mdash;you&apos;ve
-              got this!
+              The second, Workout creates a Workout based on your preferences.
+              Once done, log your achievements! Best of luck you got this!
+            
             </h1>
           </div>
           <WorkoutInfo />
