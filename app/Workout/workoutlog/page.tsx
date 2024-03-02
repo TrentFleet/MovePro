@@ -50,8 +50,8 @@ export default function WorkoutLog() {
 
   return (
     <main>
-      <div className="flex justify-center m-4 p-4"></div>
-      <div className="justify-center text-center max-w-sm border-2 rounded-lg p-20 border-black shadow-md transition-transform transform mx-auto">
+      <div className="flex justify-center p-4"></div>
+      <div className="justify-center text-center max-w-sm border-2 rounded-lg p-10 border-black shadow-md transition-transform transform mx-auto">
         <h1 className="text-3xl font-bold mb-6">Workout Log</h1>
         <form className="mb-2 justify-center flex flex-col items-center">
           <label className="mb-2">
@@ -60,10 +60,10 @@ export default function WorkoutLog() {
               type="date"
               value={selectedDate}
               onChange={(e) => setSelectedDate(e.target.value)}
-              className="m-4 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+              className="m-2 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
             />
           </label>
-          <label className="mb-2">
+          <label className="m-2">
             How was your workout?
             <textarea
               value={logText}
