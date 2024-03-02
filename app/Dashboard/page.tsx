@@ -4,10 +4,10 @@ import { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { PiArrowDownBold } from "react-icons/pi";
-import WorkoutGenerator from "../Workout/workoutcontainer/page";
-import WorkoutInfo from "../Workout/workoutinfo/page";
+import WorkoutGenerator from "../Workout/workoutgenerator/page";
 import WorkoutLog from "../Workout/workoutlog/page";
 import dynamic from 'next/dynamic';
+import Logo from '@/components/navbar/_components/logo';
 
 const InstructionSection = dynamic(() => import('@/components/InstructionSection'), { ssr: false });
 
@@ -22,16 +22,17 @@ export default function Dashboard() {
 
   return (
     <main>
-      <div className="flex flex-col bg-gradient-to-t from-slate-50 justify-center items-center m-6 mx-auto px-auto">
+      <div className='flex justify-evenly gap-20 m-6'>
+        <Logo />
         <LogoutLink>
           <Button className="bg-black">Log out</Button>
         </LogoutLink>
+        </div>
+        <div className="flex flex-col bg-gradient-to-t from-slate-50 justify-center items-center m-6 mx-auto px-auto">
         {isInstructionVisible && (
           <InstructionSection />
         )}
         <div className="m-6">
-          <WorkoutInfo />
-          <PiArrowDownBold className="m-2 mx-auto text-4xl" />
           <WorkoutGenerator />
           <PiArrowDownBold className="m-2 mx-auto text-4xl" />
           <WorkoutLog />

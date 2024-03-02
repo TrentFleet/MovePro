@@ -39,19 +39,19 @@ export default function CarouselDemo() {
             {Array.from({ length: 5 }).map((_, index) => (
               <CarouselItem key={index}>
                 <div className="flex justify-center">
-                  <Card key={index}>
-                    <CardContent>
-                      <Image
-                      width={1000}
-                      height={1000}
-                        src={`/assets/image${(index % 5) + 1}.jpg`}
-                        alt={`Random Image ${index + 1}`}
-                        className="lg:max-w-100 lg:w-100 w-100 h-100 justify-center text-center"
-                        // Adjusted the class to "w-full lg:w-80" for responsiveness
-                      />
-                    </CardContent>
-                  </Card>
-                </div>
+                    <Card key={index}>
+                      <CardContent>
+                        <Image
+                          width={1000}
+                          height={1000}
+                          src={`/assets/image${(index % 5) + 1}.jpg`}
+                          alt={`Random Image ${index + 1}`}
+                          className="lg:max-w-100 lg:w-full w-full h-full justify-center text-center"
+                          placeholder="empty"
+                        />
+                      </CardContent>
+                    </Card>
+                  </div>
               </CarouselItem>
             ))}
           </CarouselContent>

@@ -2,17 +2,15 @@
 
 import React, { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+// ... other imports
 
-const WorkoutLog = () => {
+export default function WorkoutLog() {
   const [selectedDate, setSelectedDate] = useState("");
-  const initialLogs: any[] | (() => any[]) = []; // Declare and initialize the initialLogs variable
-
+  const [logText, setLogText] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-  const [workoutLogs, setWorkoutLogs] = useState(initialLogs);
-
+  const [workoutLogs, setWorkoutLogs] = useState([]);
 
   useEffect(() => {
-    // Retrieve workout logs from storage on component mount
     const storedLogs = localStorage.getItem("workoutLogs");
     if (storedLogs) {
       setWorkoutLogs(JSON.parse(storedLogs));
@@ -20,30 +18,32 @@ const WorkoutLog = () => {
   }, []);
 
   const handleSendEmail = () => {
-    // Check if 24 hours have passed since the last workout log
-    const lastLogDate = workoutLogs.length > 0 ? (workoutLogs[0] as { logDate: string }).logDate : null as string | null;
+    const lastLogDate =
+      workoutLogs.length > 0
+        ? new Date((workoutLogs[0] as { logDate: string }).logDate).getTime()
+        : null;
+  
     const currentTime = new Date().getTime();
-    const timeSinceLastLog = lastLogDate ? currentTime - new Date(lastLogDate).getTime() : 0;
-
-    // if (timeSinceLastLog < 24 * 60 * 60 * 1000) {
-    //   alert("You can log a workout once every 24 hours.");
-    //   return;
-    // }
-    // Log the workout and update the storage
-    const newLog = { logDate: selectedDate, logEmoji: "🔥" };
-    const newWorkoutLogs: { logDate: string; logEmoji: string; }[] = [newLog, ...workoutLogs.slice(0, 9)]; // Keep only the latest 10 logs
+    const timeSinceLastLog = lastLogDate
+      ? currentTime - lastLogDate
+      : 24 * 60 * 60 * 1000; // Assume 24 hours if no previous logs
+  
+    if (timeSinceLastLog < 24 * 60 * 60 * 1000) {
+      alert("You can log a workout once every 24 hours.");
+      return;
+    }
+  
+    const newLog = { logDate: selectedDate, logEmoji: "🔥", logText };
+    const newWorkoutLogs: { logDate: string; logEmoji: string; logText: string }[] = [newLog, ...workoutLogs.slice(0, 9)];
     localStorage.setItem("workoutLogs", JSON.stringify(newWorkoutLogs));
-    setWorkoutLogs(newWorkoutLogs);
-    // Implement the logic to send the log to the user's email
-    // For now, we'll log the data as an example
+    setWorkoutLogs(newWorkoutLogs as never[]);
+  
+    // Additional logic to send the log to the user's email
     console.log(newWorkoutLogs);
-    newWorkoutLogs.forEach(log => console.log(log));
-
-    
   };
+  
 
   const handleRefreshLogs = () => {
-    // Clear workout history and refresh the log data
     localStorage.removeItem("workoutLogs");
     setWorkoutLogs([]);
   };
@@ -63,7 +63,14 @@ const WorkoutLog = () => {
               className="m-4 p-2 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
             />
           </label>
-
+          <label className="mb-2">
+            How was your workout?
+            <textarea
+              value={logText}
+              onChange={(e) => setLogText(e.target.value)}
+              className="m-6 p-20 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+            ></textarea>
+          </label>
           <div className="flex flex-col gap-4 font-semibold text-md justify-center">
             <Button
               type="button"
@@ -73,31 +80,36 @@ const WorkoutLog = () => {
               }`}
               disabled={isLoading}
             >
-              {isLoading ? "Sending..." : "Log your results"}
+              {isLoading ? "Sending..." : "Log Your Results"}
             </Button>
           </div>
         </form>
 
         <div className="mt-8">
           <h2 className="text-xl font-bold mb-4">Workout History</h2>
-          <div className="grid grid-cols-2 justify-center mx-auto gap-4">
-          {workoutLogs.map((log: { logDate: string; logEmoji: string; }, index: number) => {
-            const logDate = new Date(log.logDate);
-            const day = logDate.toLocaleDateString(undefined, { day: '2-digit' });
-            const month = logDate.toLocaleDateString(undefined, { month: '2-digit' });
-            const year = logDate.getFullYear();
+          <div className="grid grid-cols-1 justify-center mx-auto gap-4">
+            {workoutLogs.map(
+              (
+                log: { logDate: string; logEmoji: string; logText: string },
+                index: number
+              ) => (
+                <div
+                  key={index}
+                  className="bg-white border flex-col justify-center items-center mx-auto rounded-lg p-4 shadow-md"
+                >
+                  <p>
+                    {new Date(log.logDate).toLocaleDateString('en-GB', {
+                      day: '2-digit',
+                      month: '2-digit',
+                      year: 'numeric',
+                    })}
+                  </p>
 
-            return (
-              <div key={index} className="bg-white border flex-col justify-center items-center mx-auto rounded-lg p-4 shadow-md">
-                <p>
-                  {`${day}/${month}/${year}`}
-                </p>
-                <p>{log.logEmoji}</p>
-              </div>
-            );
-          })}
-
-
+                  <p>{log.logEmoji}</p>
+                  <p>{log.logText}</p>
+                </div>
+              )
+            )}
           </div>
           <Button
             type="button"
@@ -110,6 +122,21 @@ const WorkoutLog = () => {
       </div>
     </main>
   );
-};
+}
 
-export default WorkoutLog;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
