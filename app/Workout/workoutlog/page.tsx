@@ -70,7 +70,7 @@ export default function WorkoutLog() {
             <textarea
               value={logText}
               onChange={(e) => setLogText(e.target.value)}
-              className="m-6 p-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+              className="m-6 p-10 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
             ></textarea>
           </label>
           <div className="flex flex-col gap-4 font-semibold text-md justify-center">

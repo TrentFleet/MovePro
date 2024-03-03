@@ -48,9 +48,9 @@ const MyApiPage: React.FC = () => {
         />
       </div>
       {exercises.length > 0 && (
-  <ul className="grid grid-cols-1 justify-center sm:grid-cols-2 md:grid-cols-3 gap-8">
+  <ul className="grid grid-cols-1 mx-auto px-auto justify-center sm:grid-cols-1 md:grid-cols-1 gap-8">
     {exercises.slice(0, 3).map((exercise) => (
-      <li key={exercise.id} className="bg-white rounded-lg overflow-hidden shadow-md p-6">
+      <li key={exercise.id} className="bg-white rounded-lg shadow-md p-6">
         <strong>{exercise.name}</strong>
         <p>Body Part: {exercise.bodyPart}</p>
         <p>Target: {exercise.target}</p>
