@@ -56,12 +56,12 @@ const MyApiPage: React.FC = () => {
         <p>Target: {exercise.target}</p>
         <p>Equipment: {exercise.equipment}</p>
         {exercise.gifUrl && (
-          <Image
-            className="mt-4"
-            src={exercise.gifUrl}
-            alt={`GIF for ${exercise.name}`}
-            style={{ maxWidth: "100%" }}
-          />
+          <img
+          className="mt-4"
+          src={exercise.gifUrl}
+          alt={`GIF for ${exercise.name}`}
+          style={{ maxWidth: '100%' }}
+        />
         )}
         {/* Add more details as needed */}
       </li>
