@@ -53,7 +53,7 @@ export default function WorkoutLog() {
 
   return (
     <main>
-      <div className="justify-center flex flex-col mt-6 max-w-sm text-center border-2 rounded-lg p-10 w-full border-black shadow-md mx-auto px-auto ">
+      <div className="justify-center flex flex-col mt-6 max-w-sm text-center border-2 rounded-lg p-4 m-4 border-black shadow-md mx-auto px-auto ">
         <h1 className="text-3xl font-bold mb-6">Training Diary</h1>
         <form className="mb-2 justify-center flex flex-col items-center">
           <label className="mb-2">
@@ -70,7 +70,7 @@ export default function WorkoutLog() {
             <textarea
               value={logText}
               onChange={(e) => setLogText(e.target.value)}
-              className="m-6 p-14 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
+              className="m-6 p-12 border border-gray-300 rounded-md focus:outline-none focus:border-blue-600"
             ></textarea>
           </label>
           <div className="flex flex-col gap-4 font-semibold text-md justify-center">
