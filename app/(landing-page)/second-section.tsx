@@ -9,6 +9,7 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function CarouselDemo() {
   // Generate random image URLs
@@ -47,8 +48,9 @@ export default function CarouselDemo() {
                           src={`/assets/image${(index % 5) + 1}.jpg`}
                           alt={`Random Image ${index + 1}`}
                           className="lg:max-w-100 lg:w-full w-full h-full justify-center text-center"
-                          placeholder="empty"
+                          
                         />
+                      <Skeleton className="w-full h-full " />
                       </CardContent>
                     </Card>
                   </div>

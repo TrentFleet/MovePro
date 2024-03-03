@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { SetStateAction, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LogoutLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { PiArrowDownBold } from "react-icons/pi";
@@ -8,6 +8,7 @@ import WorkoutGenerator from "../Workout/workoutgenerator/page";
 import WorkoutLog from "../Workout/workoutlog/page";
 import dynamic from "next/dynamic";
 import Logo from "@/components/navbar/_components/logo";
+import ApiExercises from "../MyApi/page";
 
 const InstructionSection = dynamic(
   () => import("@/components/InstructionSection"),
@@ -33,11 +34,12 @@ export default function Dashboard() {
       </div>
       <div className="flex flex-col bg-gradient-to-t from-slate-50 justify-center items-center m-6 mx-auto px-auto">
         {isInstructionVisible && <InstructionSection />}
-        <div className="m-6">
           <WorkoutGenerator />
-          <PiArrowDownBold className=" text-purple-600 mx-auto text-4xl" />
+        <div className="m-6 justify-center max-w-sm items-center">
+      <ApiExercises />
           <WorkoutLog />
-        </div>
+      </div>
+
       </div>
     </main>
   );

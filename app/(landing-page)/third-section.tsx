@@ -2,11 +2,11 @@
 
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
-import { Dumbbell, Flame, Calendar } from "lucide-react";
+import { Dumbbell, Flame, Calendar, MedalIcon } from "lucide-react";
 
 const tabs = [
   {
-    icon: <Dumbbell size={40} className="text-blue-600" />,
+    icon: <Dumbbell size={40} className="text-black" />,
     name: "Step 1: Generate a Warm up",
   },
   {
@@ -14,7 +14,7 @@ const tabs = [
     name: "Step 2: Create the Workout",
   },
   {
-    icon: <Calendar size={40} className="text-purple-600" />,
+    icon: <MedalIcon size={40} className="text-green-600" />,
     name: "Step 3: Complete the Workout",
   },
 ];
@@ -39,12 +39,12 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center flex-col m-8 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
+    <div className="grid justify-center items-center m-8 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
       <div className={`pt-8 m-8 lg:pt-0 text-3xl xl:text-5xl font-medium text-center ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        Arrive at the gym with a plan
+        Create your own workout in less than a minute
       </div>
 
-      <div className="flex flex-col justify-between gap-10 p-2">
+      <div className="grid grid-cols-3 justify-between gap-10 p-2">
         {tabs.map((tab) => (
           <motion.div
             key={tab.name}
@@ -56,7 +56,7 @@ const ThirdSection = () => {
               ${
                 activeTab.name === tab.name
                   ? "rounded-md bg-purple-200 md:bg-gray-100 border-purple-400 items-center justify-center flex-col flex"
-                  : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-2items-center justify-center hover:bg-purple-100"
+                  : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-2 items-center justify-center hover:bg-purple-100"
               } `}
             onClick={() => setActiveTab(tab)}
           >

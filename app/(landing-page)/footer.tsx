@@ -14,7 +14,7 @@ const Footer = () => {
         className="container m-6mx-auto py-4 flex flex-col items-center"
       >
         <div className="text-4xl xl:text-5xl font-medium text-center">
-          Generate Your Workout Today
+          Start Generating now!
           <div className="mt-6">
             <Image
               className="w-2/4 mx-auto py-4 flex flex-col items-center"

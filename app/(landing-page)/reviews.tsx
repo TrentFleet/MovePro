@@ -1,41 +1,43 @@
-
+import React from 'react';
 
 const Reviews = () => {
   const userReviews = [
     {
       name: "Megan Kikuchi",
-      review: "I am really loving MovePro I often struggle to come up with Workout Ideas on my own",
+      review: "I love using MovePro, it's so easy to use!",
     },
     {
       name: "Adam El Gana",
-      review: "Simple and Easy.",
+      review: "Simple as",
     },
     {
-        name: "Emily Julian",
-        review: "MovePro only costs a coffee and saves you so much time in the gym!",
-      },
-    // Add more reviews as needed
+      name: "Emily Julian",
+      review: "Only costs a coffee!",
+    },
+    {
+      name: "Strauss Bessell",
+      review: "MovePro helps me mix my workouts up!",
+    },
+
   ];
 
   return (
     <div>
-      <div className="flex flex-col mx-10 bg-gradient-to-l
-    from-purple-400 justify-center text-center p-4">
+      <div className="grid max-w-sm items-center grid-cols-1 bg-gradient-to-l from-purple-200 justify-center text-center mx-auto p-6">
         <h1 className="text-4xl font-medium mb-8 text-center">
-          Testimonals
+          Our Testimonials
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          {userReviews.map((review, index) => (
+        <div className="grid grid-cols-2 justify-center gap-2">
+          {userReviews.map((review, index,) => (
             <div
               key={index}
               className="bg-white border rounded-lg p-4 shadow-md transition-transform transform hover:bg-gray-50 hover:scale-105"
             >
               <div className="flex items-center mb-4">
-                <p className="ml-2 text-purple-600 font-semibold">
-                </p>
+                <p className="ml-2 text-purple-600 font-semibold"></p>
               </div>
-              <p className="text-lg mb-4">{review.review}</p>
-              <p className="text-gray-600">- {review.name}</p>
+              <p className="text-md mb-4">{review.review}</p>
+              <p className="text-gray-600">{review.name}</p>
             </div>
           ))}
         </div>
