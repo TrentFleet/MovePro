@@ -60,7 +60,7 @@ const MyApiPage: React.FC = () => {
           className="mt-4"
           src={exercise.gifUrl}
           alt={`GIF for ${exercise.name}`}
-          style={{ maxWidth: '100%' }}
+          style={{ width: '100%' }}
         />
         )}
         {/* Add more details as needed */}
