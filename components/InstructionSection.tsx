@@ -22,12 +22,12 @@ const InstructionSection = () => {
     3. Select your training type, muscle group, and intensity.
   </h1>
   <h1 className="text-purple-600 m-2">
-    4. Click 'Generate Workout' and get ready to crush it!
+    4. Click Generate Workout and get ready to crush it!
   </h1>
 </div>
       )}
       <Button onClick={toggleContentVisibility}>
-        {isContentVisible ? 'Hide Instructions' : 'Show Instructions'}
+        {isContentVisible ? "Hide Instructions" : "Show Instructions"}
       </Button>
     </div>
   );
