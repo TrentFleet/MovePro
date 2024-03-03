@@ -2,8 +2,8 @@
 
 import React, { useEffect, useState } from 'react';
 import { fetchData, exerciseOptions } from '../utils/fetchData';
-import { Button } from '@/components/ui/button';
 import { ArrowDown } from 'lucide-react';
+import Image from 'next/image';
 
 const MyApiPage: React.FC = () => {
   const [exercises, setExercises] = useState<any[]>([]);
@@ -35,8 +35,8 @@ const MyApiPage: React.FC = () => {
   return (
     <div className="flex flex-col justify-center items-center">
       <div className="mb-4 items-center">
-        <h1 className='text-center m-4 text-md justify-center flex flex-col font-semibold items-center'>
-          not sure how to do an exercise, try searching for it below
+        <h1 className="text-center m-4 text-md justify-center flex flex-col font-semibold items-center">
+          not sure how to do a exercise try searching for it below
           <ArrowDown/>
         </h1>
         <input
@@ -56,11 +56,11 @@ const MyApiPage: React.FC = () => {
         <p>Target: {exercise.target}</p>
         <p>Equipment: {exercise.equipment}</p>
         {exercise.gifUrl && (
-          <img
+          <Image
             className="mt-4"
             src={exercise.gifUrl}
             alt={`GIF for ${exercise.name}`}
-            style={{ maxWidth: '100%' }}
+            style={{ maxWidth: "100%" }}
           />
         )}
         {/* Add more details as needed */}
