@@ -39,9 +39,9 @@ const ThirdSection = () => {
   }, []);
 
   return (
-    <div className="grid justify-center items-center m-8 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
+    <div className="grid justify-center items-center m-4 px-4 md:px-0 xl:w-3/4 mx-auto 2xl:w-[55%] ">
       <div className={`pt-8 m-8 lg:pt-0 text-3xl xl:text-5xl font-medium text-center ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-        Create your own workout in less than a minute
+        Create your own workout in minutes
       </div>
 
       <div className="grid grid-cols-3 justify-between gap-10 p-2">
@@ -55,8 +55,8 @@ const ThirdSection = () => {
             
               ${
                 activeTab.name === tab.name
-                  ? "rounded-md bg-purple-200 md:bg-gray-100 border-purple-400 items-center justify-center flex-col flex"
-                  : "md:bg-[#f6f5f4] rounded-md xl:rounded-xl p-2 items-center justify-center hover:bg-purple-100"
+                  ? "rounded-md bg-purple-200 md:bg-purple-100 border-purple-400 items-center justify-center flex-col flex"
+                  : "md:bg-purple-200 rounded-md xl:rounded-xl p-2 items-center justify-center hover:bg-purple-100"
               } `}
             onClick={() => setActiveTab(tab)}
           >
@@ -70,7 +70,7 @@ const ThirdSection = () => {
         ))}
       </div>
 
-      <div className={`py-4 lg:w-1/2 lg:px-8 xl:px-0 md:px-8 w-3/4 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+      <div className={`py-4 lg:w-1/2 lg:px-8 justify-center items-center mx-auto flex flex-col xl:px-0 md:px-8 w-3/4 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
         {activeTab && (
           <div className="flex justify-center items-center flex-col">
             <p className="text-lg">
